@@ -26,16 +26,8 @@ function App() {
 	}
 
 	// И 2 переменных-флага — находимся ли мы на первом шаге, и находимся ли на последнем
-	let firstStep = false;
-	let lastStep = false;
-
-	if(activeIndex === 0) {
-		firstStep = true;
-	}
-
-	if(activeIndex === steps.length - 1) {
-		lastStep = true;
-	}
+	const firstStep = activeIndex === 0;
+	const lastStep = activeIndex === steps.length - 1;
 
 	return (
 		<div className={styles.container}>
